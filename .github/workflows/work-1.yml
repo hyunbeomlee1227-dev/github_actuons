@@ -42,6 +42,7 @@ jobs:
         env:
           PRIVATE_HTML: ${{ secrets.PRIVATE_HTML }}
         run: |
+          mkdir -p src
           cat <<EOF > src/private.html
           $PRIVATE_HTML
           EOF
